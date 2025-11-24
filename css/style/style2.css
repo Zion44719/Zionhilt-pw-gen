@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #d7cec7;
+  font-family: 'Cardo', serif;
+  color: #fff;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #d7cec7;
+  z-index: 3;
+  top: 0;
+  position: fixed;
+  height: 60px;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #565656;
+}
+
+.links {
+  display: flex;
+  margin-right: 20px;
+}
+
+.link {
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.logo {
+  margin-left: 20px;
+}
+
+/* HEADER TEXT AREA */
+
+.header-text {
+  font-size: 2em;
+  margin: 20px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+h1 {
+  color: #76323f;
+}
+
+span {
+  color: #76323f;
+}
+
+
+
+/* PROJECTS SECTION */
+
+.projects .project-card {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin: 0 auto;
+  background-color: #565656;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 40px rgba(0,0,0,.5);
+  overflow: hidden;
+}
+
+.projects .project-card .layer {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: calc(100% - 1px);
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#baa795, #baa795);
+  transition: 0.5s;
+}
+
+.projects .project-card:hover .layer {
+  top: 0;
+}
+
+.projects .project-card .content {
+  position: relative;
+  z-index: 2;
+}
+
+.projects .project-card .content .details a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.project-name {
+  font-size: 3rem;
+  letter-spacing: .1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.tic {
+  letter-spacing: .2em;
+}
+
+.projects .project-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects .project-card:hover .content .details a {
+  transition: 0.6s;
+  color: black;
+}
+
+/* ABOUT SECTION */
+
+
+.about-text {
+  color: #565656;
+  background-color: #fff;
+  font-size: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  line-height: 3rem;
+}
+
+/* FOOTER SECTION */
+
+.footer {
+  margin-top: 50px;
+  font-size: 2em;
+}
+
+.social {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 70px 70px;
+  grid-template-areas:
+  ". . . . t . . l . . . ."
+  ". . . . e e e e . . . .";
+}
+
+.twitter {
+  grid-area: t;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.linkedin {
+  grid-area: l;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.email {
+  grid-area: e;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ /* MEDIA QUERIES */
+
+@media only screen and (min-width: 500px) {
+  .header-text {
+    margin: 100px 60px 50px 60px;
+    font-size: 2.5rem;
+  }
+
+  .about {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      ". a a a a a a a a a a ."
+  }
+
+  .about-text {
+    grid-area: a;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header-text {
+    font-size: 3rem;
+    margin: 100px 200px 50px 200px;
+  }
+
+  .about {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      ". . a a a a a a a a . ."
+  }
+
+  .projects .project-card {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .header-text {
+    font-size: 4rem;
+    margin: 100px 200px 50px 200px;
+  }
+
+  .about {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      ". a a a a a a a a a a ."
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .projects .project-card {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+    background-color: #565656;
+    padding: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,.5);
+    overflow: hidden;
+  }
+}

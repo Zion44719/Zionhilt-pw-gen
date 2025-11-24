@@ -1,0 +1,168 @@
+*, 
+::after 
+::before {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --modal-duration: 1s;
+    --primary-color: rgb(136, 136, 184);
+    --primary-color-200: rgb(31, 31, 156);
+    --primary-color-300: rgb(10, 10, 99);
+
+    --textFont: 'Roboto', sans-serif;
+    --headingFont: 'Corinthia', sans-serif;
+
+
+    --white: #fff;
+    --black: #000;
+    --grey-100: #ccc;
+    --grey-200: #e4dcd4;
+    --transition: all 0.3s ease-in;
+}
+
+body {
+    /* background-color: var(--primary-color); */
+    font-family: var(--textFont);
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+body.show-nav {
+    /* Width of nav */
+    transform: translateX(200px);
+}
+
+p {
+    font-size: 1.7rem;
+}
+
+/* h1,
+h2,
+h3,
+h4,
+h5 {
+    text-transform: capitalize;
+    font-family: var(--headingFont);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 2px;
+} */
+
+/* h1 {
+    font-size: 3.2rem;
+}
+h2 {
+    font-size: 2.4rem;
+}
+h3 {
+    font-size: 1.87rem;
+}
+h4 {
+    font-size: 1.6em;
+}
+h5 {
+    font-size: 1.32rem;
+} */
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.masthead {
+    background-color: var(--primary-color-200);
+    text-align: right;
+    margin-left: 10px;
+}
+
+/* Nav Session */
+
+.nav {
+    background-color: var(--primary-color-200);
+    border-right: 2px solid rgba(200, 200, 200, 0.1);
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 70%;
+    z-index: 100;
+    transform: translateX(-100%);
+}
+
+.nav__logo {
+    margin: 125px;
+}
+
+.nav__links li a {
+    color: var(--black);
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    transition: var(--transition);
+}
+  
+.nav ul li {
+    border-bottom: 2px solid rgba(200, 200, 200, 0.1);
+    padding: 20px;
+}
+  
+.nav ul li:first-of-type {
+    border-top: 2px solid rgba(200, 200, 200, 0.1);
+}
+
+.nav__links li a:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+/* Nav Session Ends */
+
+button {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    padding: 10px 2rem;
+    font-size: 1.5rem;
+    border-radius: 3px;
+    color: var(--white);
+    transition: var(--transition);
+}
+
+button:hover {
+    background-color: var(--primary-color-300);
+}
+
+
+/* About Us */
+/* .about {
+
+}
+
+.about__content {
+
+} */
+
+/* About us ends */
