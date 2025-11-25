@@ -21,7 +21,7 @@ body {
   align-items: center;
   gap: 5px;
   padding-block: 10px;
-  background-color: aqua;
+  background-color: rgba(0, 255, 255, 0.295);
 }
 
 h1 {
